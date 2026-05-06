@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>聯絡我們 | Elysian Menswear</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>E</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo"><a href="index.html">ELYSIAN</a></div>
+        <div class="nav-links">
+            <a href="index.html">首頁</a>
+            <a href="about.html">公司簡介</a>
+            <a href="casual.html">休閒服飾</a>
+            <a href="formal.html">正式服飾</a>
+            <a href="jewelry.html">飾品</a>
+            <a href="accessories.html">配件</a>
+            <a href="others.html">其它類</a>
+            <a href="contact.html">聯絡我們</a>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 150px;">
+        <h1 class="section-title reveal">聯絡我們</h1>
+        <div class="contact-container reveal">
+            <div>
+                <h2>預約諮詢</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 40px;">歡迎蒞臨我們的旗艦店，或透過下方表單與我們聯繫。</p>
+                <p>地址：台北市信義區精品路 88 號</p>
+                <p>電話：+886 2 2345 6789</p>
+                <p>電郵：concierge@elysian.com</p>
+            </div>
+            <form class="contact-form">
+                <input type="text" placeholder="姓名" required>
+                <input type="email" placeholder="電子郵件" required>
+                <textarea rows="5" placeholder="您的訊息"></textarea>
+                <button type="submit" class="btn">傳送訊息</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-logo">ELYSIAN</div>
+        <p>© 2026 Elysian Menswear. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    
+    <script>
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(reveal => observer.observe(reveal));
+    </script>
+
+</body>
+</html>

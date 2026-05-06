@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saffiano 皮革皮夾 | Elysian Menswear</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>E</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    
+    <nav>
+        <div class="logo"><a href="index.html">ELYSIAN</a></div>
+        <div class="nav-links">
+            <a href="index.html">首頁</a>
+            <a href="about.html">公司簡介</a>
+            <a href="casual.html">休閒服飾</a>
+            <a href="formal.html">正式服飾</a>
+            <a href="jewelry.html">飾品</a>
+            <a href="accessories.html">配件</a>
+            <a href="others.html">其它類</a>
+            <a href="contact.html">聯絡我們</a>
+        </div>
+    </nav>
+
+    <div class="container" style="margin-top: 150px; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start;">
+        <div class="product-gallery reveal">
+            <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&q=80&w=800" alt="Saffiano 皮革皮夾" style="width: 100%; border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+        </div>
+        <div class="product-details reveal">
+            <span class="product-category" style="font-size: 1rem;">配件</span>
+            <h1 style="font-size: 3rem; margin: 20px 0;">Saffiano 皮革皮夾</h1>
+            <p class="product-price" style="font-size: 1.5rem; color: var(--accent-color); margin-bottom: 30px;">TWD 6,800</p>
+            <p style="color: var(--text-secondary); margin-bottom: 40px;">
+                這款精選產品體現了 Elysian Menswear 對品質與設計的極致追求。採用頂級面料，專為追求卓越品味的紳士打造。不論是細節處理還是穿著感，都展現出與眾不同的質感。
+            </p>
+            <button class="btn" style="width: 100%;">加入購物車</button>
+            <div style="margin-top: 40px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px;">
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">✓ 全球免運費</p>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">✓ 30 天無理由退貨</p>
+                <p style="font-size: 0.9rem; color: var(--text-secondary);">✓ 專屬禮品包裝</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="footer-logo">ELYSIAN</div>
+        <p>© 2026 Elysian Menswear. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    
+    <script>
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(reveal => observer.observe(reveal));
+    </script>
+
+</body>
+</html>
+        

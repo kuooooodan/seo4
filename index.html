@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elysian Menswear | 頂級男性服飾</title>
+    <meta name="description" content="Elysian Menswear 提供最頂級的男性服飾，從休閒到正式，完美詮釋紳士風采。">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>E</text></svg>">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">ELYSIAN</div>
+        <div class="nav-links">
+            <a href="index.html">首頁</a>
+            <a href="about.html">公司簡介</a>
+            <a href="casual.html">休閒服飾</a>
+            <a href="formal.html">正式服飾</a>
+            <a href="jewelry.html">飾品</a>
+            <a href="accessories.html">配件</a>
+            <a href="others.html">其它類</a>
+            <a href="contact.html">聯絡我們</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <h1>ELYSIAN MENSWEAR</h1>
+        <p>定義現代紳士的卓越品味。從精緻裁剪到日常優雅，我們為您打造不凡。</p>
+        <div class="hero-btns">
+            <a href="formal.html" class="btn">探索正式系列</a>
+            <a href="casual.html" class="btn" style="margin-left: 20px;">探索休閒系列</a>
+        </div>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title reveal">精選系列</h2>
+        <div class="product-grid">
+            <!-- Featured Items -->
+            <div class="product-card reveal">
+                <a href="product-1.html">
+                    <img src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&q=80&w=800" alt="Casual Shirt" class="product-image">
+                    <div class="product-info">
+                        <span class="product-category">休閒服飾</span>
+                        <h3 class="product-name">經典白亞麻襯衫</h3>
+                        <p class="product-price">TWD 2,800</p>
+                    </div>
+                </a>
+            </div>
+            <div class="product-card reveal">
+                <a href="product-5.html">
+                    <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800" alt="Suit" class="product-image">
+                    <div class="product-info">
+                        <span class="product-category">正式服飾</span>
+                        <h3 class="product-name">午夜藍手工西裝</h3>
+                        <p class="product-price">TWD 32,000</p>
+                    </div>
+                </a>
+            </div>
+            <div class="product-card reveal">
+                <a href="product-12.html">
+                    <img src="https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&q=80&w=800" alt="Sunglasses" class="product-image">
+                    <div class="product-info">
+                        <span class="product-category">配件</span>
+                        <h3 class="product-name">經典飛官太陽眼鏡</h3>
+                        <p class="product-price">TWD 5,500</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-logo">ELYSIAN</div>
+        <p>© 2026 Elysian Menswear. All Rights Reserved.</p>
+        <div class="social-links">
+            <a href="#">Instagram</a>
+            <a href="#">Facebook</a>
+            <a href="#">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal animation on scroll
+        const reveals = document.querySelectorAll(".reveal");
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("active");
+                }
+            });
+        }, { threshold: 0.1 });
+
+        reveals.forEach(reveal => observer.observe(reveal));
+    </script>
+</body>
+</html>
